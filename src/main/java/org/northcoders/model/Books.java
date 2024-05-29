@@ -1,17 +1,22 @@
 package org.northcoders.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.northcoders.dao.FakeBooksDAO;
+import org.northcoders.dao.Results;
+
+import java.util.List;
+
 public record Books(
-  int id,
-  String title,
-  String author,
-  String genre,
-  String description
-  ) {
-}
+        @JsonProperty("id") int id,
+        @JsonProperty("title") String title,
+        @JsonProperty("author") String author,
+        @JsonProperty("genre") String genre,
+        @JsonProperty("description") String description,
+        @JsonProperty("isbn") String isbn,
+        @JsonProperty("image") String image,
+        @JsonProperty("published") String published,
+        @JsonProperty("publisher") String publisher
 
+) { }
 
-//  "id": 1,
-//            "title": "I am very tired of.",) {
-//            "author": "Lourdes Johns",}
-//            "genre": "Qui",
-//            "description": "T!' said the one who had not long to doubt, for the next witness!' said the Queen. 'Never!' said the Hatter. 'He won't stand beating. Now, if you were down here with me! There are no mice in the.",
